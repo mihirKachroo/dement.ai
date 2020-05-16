@@ -13,13 +13,16 @@ with open(stopwords_path, 'r') as fh:
     stopwords = fh.read().split(",")
 ds = DocSim(model,stopwords=stopwords)
 
+
+def similarity_score(source_sentence, target_sentence):
+    sim_scores = ds.calculate_similarity(source_doc, target_docs)
+
+    for score in sim_scores:
+        print(source_doc, score['score'])
+
 source_doc = "A couple playing with a little boy on the beach."
 target_docs = ["A couple are playing with a young child outside"]
-
-sim_scores = ds.calculate_similarity(source_doc, target_docs)
-
-for score in sim_scores:
-    print(score)
+similarity_score(source_doc, target_docs)
 
 # Prints:
 ##   [ {'score': 0.99999994, 'doc': 'delete a invoice'}, 
