@@ -1,4 +1,4 @@
-# Dementia
+# dement.ai
 
 ## Inspiration
 
