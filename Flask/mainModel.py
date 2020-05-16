@@ -5,7 +5,6 @@ import pandas as pd
 import statsmodels.regression.linear_model as sm
 from datetime import date, timedelta
 import base64
-import io
 
 # I'm probably going to first want to do a linear regression just to find outlier. We might want to change the regression later.
 # Actually, we can try to figure out which regression would work best.
