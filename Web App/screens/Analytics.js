@@ -1,9 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import { Text, Image } from "react-native";
 import image from "../node_modules/flaskapiimage.jpg";
 
+
 export default function Analytics() {
+  const [data, setData] = useState(null);
+  async function getData() {
+    const data = await fetch("https://tohack.herokuapp.com/", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify("amountSpentDaily"),
+    });
+    const obj = await data.json();
+    return (obj);
+  }
+  function loadImage(blob) {
+    const reader = new FileReader();
+    let dataURL;
+    reader.addEventListener("load", function () {
+      dataURL = reader.result;
+    }, false);
+    if (blob) {
+      reader.readAsDataURL(blob);
+    }
+    return dataURL;
+  }
+  useEffect(() => {
+    getData().then((fetched) => setData(fetched.results.results));
+  }, []);
   return <Image
   style={{
     width: 400,
