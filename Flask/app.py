@@ -16,6 +16,10 @@ def predict():
     # get data
     data = request.get_json(force=True)
 
+    sent1 = "A couple are playing with a young child outside"
+    sent2 = "A couple playing with a little boy on the beach"
+    accuracy = main.similarity_score(sent1, sent2)
+
     num_data_point = np.random.randint(10, 100)
     times = [i for i in range(num_data_point)]
     acc = [0.03*i + np.random.uniform(0, 0.25) for i in range(num_data_point)]
@@ -24,10 +28,6 @@ def predict():
     i = mainModel.LinearOutlier(np.array(times), np.array(acc))
     filename = i.linear_regression()
     output = {'results': filename}
-
-    sent1 = "A couple are playing with a young child outside"
-    sent2 = "A couple playing with a little boy on the beach"
-    accuracy = main.similarity_score(sent1, sent2)
     
     # return data
     return jsonify(results=output)
