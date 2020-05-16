@@ -1,4 +1,4 @@
-# Alzheimers Vision
+# alz.vision
 
 ## Inspiration
 
