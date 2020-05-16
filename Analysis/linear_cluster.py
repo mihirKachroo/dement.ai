@@ -18,6 +18,7 @@ class LinearOutlier():
         '''
         self.times = times.reshape(-1, 1)
         self.accuracy = accuracy.reshape(-1, 1)
+        self.slopeintercept = []
 
     def display(self):
         '''
@@ -54,15 +55,17 @@ class LinearOutlier():
         # print(self.linreg_r)  # R-Value
         print(regressor.intercept_[0]) # Intercept
         print(regressor.coef_[0][0]) # Slope
+        self.slopeintercept.append(
+            [regressor.coef_[0][0], regressor.intercept_[0]])
     def detect_anomalies(self):
         from sklearn.ensemble import IsolationForest
         detect = IsolationForest()
-        detect.fit(self.times, self.accuracy)
-        print(detect.predict(self.times))
+        detect.fit(self.slopeintercept)
+        print(detect.predict(self.slopeintercept))
         without_outliers = [x for x, y in zip(
-            self.times, detect.predict(self.times)) if (y != -1)]
+            self.slopeintercept, detect.predict(self.slopeintercept)) if (y != -1)]
         outliers = [x for x, y in zip(
-            self.times, detect.predict(self.times)) if (y == -1)]
+            self.slopeintercept, detect.predict(self.slopeintercept)) if (y == -1)]
         print(without_outliers, outliers)
         # print(detect.predict)
 
