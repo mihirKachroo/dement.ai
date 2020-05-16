@@ -1,4 +1,4 @@
-# dement.ai
+# Alzheimers Vision
 
 ## Inspiration
 
