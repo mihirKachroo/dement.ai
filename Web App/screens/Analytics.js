@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import { Text, View, Image } from "react-native";
-import image from "../node_modules/flaskapiimage.jpg";
+// import image from "../node_modules/flaskapiimage.jpg";
 import HeaderBar from "../components/HeaderBar";
 
 

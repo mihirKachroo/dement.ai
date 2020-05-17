@@ -4,7 +4,7 @@ import mainModel
 import numpy as np
 import matplotlib.pyplot as plt 
 import sklearn
-from similarity import *
+import main
 
 # app
 app = Flask(__name__)

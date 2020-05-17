@@ -8,4 +8,4 @@ def similarity_score(sentence1, sentence2):
 sent1 = "A couple are playing with a young child outside"
 sent2 = "A couple playing with a little boy on the beach"
 
-# print(similarity_score(sent1, sent2))
+print(similarity_score(sent1, sent2))
