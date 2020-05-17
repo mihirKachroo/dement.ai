@@ -1,4 +1,5 @@
 # alz.vision
+https://www.youtube.com/watch?v=8kXNEmMbcBY
 
 ## Inspiration
 Nearly 3 million people in the US alone fall victim to memory impairments such as dementia and Alzheimer's. We personally have met people who struggle with Alzheimer's and have forgotten critical information and cherished memories, even going as far as forgetting a loved one.
