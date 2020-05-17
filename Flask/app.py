@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 import sklearn
 import main
 from pymongo import MongoClient
+from werkzeug import secure_filename
 
 # app
 app = Flask(__name__)
@@ -15,11 +16,20 @@ app = Flask(__name__)
 def index():
     return render_template('index.html') 
 
-@app.route('/', methods=['POST'])
+@app.route('/', methods = ['GET', 'POST'])
 def my_form():
     if request.method == "POST":
         text = request.form['text']
-        print(text)
+        memory = request.files['memory']
+        if text is "":
+            print("You must write a description")
+        elif memory.filename == "":
+            print("You must upload a photo")
+        else:
+            print(text)
+            print(memory.filename)
+        # memory.save(secure_filename(memory.filename))
+        # return 'file uploaded successfully'
     return render_template('index.html')
 
 def predict():

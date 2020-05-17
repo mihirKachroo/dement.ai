@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/heading.css') }}"/>
+
+    </head>
+<body>
+    <header>
+        <div class="overlay">
+    <h1 style="font-size: 80px;margin-bottom:10px;margin-top: 10px;">alz.vision</h1>
+    <h3>An Alzheimer's web tool for doctors to make a more accurate diagnosis</h3>
+    <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero nostrum quis, odio veniam itaque ullam debitis qui magnam consequatur ab. Vero nostrum quis, odio veniam itaque ullam debitis qui magnam consequatur ab.</p> -->
+        <br>
+        <!-- <button href="#choosephoto">Try it out</button> -->
+            </div>
+	</header>
+	
+
+	{% block body %}
+	{% endblock %}
+
+</body>
+</html>
