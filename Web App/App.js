@@ -8,7 +8,6 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import MyTransactions from "./screens/MyTransactions";
 import Budgeting from "./screens/Budgeting";
 import MergeBudgets from "./screens/MergeBudgets";
-import BankReconciliations from "./screens/BankReconciliations";
 import Analytics from "./screens/Analytics";
 import DidYouKnow from "./screens/DidYouKnow";
 import Help from "./screens/Help";
@@ -30,7 +29,6 @@ export default function App() {
         <Drawer.Screen name={"Transactions"} component={MyTransactions} />
         <Drawer.Screen name={"Budgeting"} component={Budgeting} />
         <Drawer.Screen name={"MergeBudgets"} component={MergeBudgets} />
-        <Drawer.Screen name={"BankReconciliations"} component={BankReconciliations} />
         <Drawer.Screen name={"Analytics"} component={Analytics} />
         <Drawer.Screen name={"DidYouKnow"} component={DidYouKnow} />
         <Drawer.Screen name={"Help"} component={Help} />

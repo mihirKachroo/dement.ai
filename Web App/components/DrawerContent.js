@@ -21,7 +21,7 @@ export default function DrawerContent({ navigation }) {
             }}
           />
           <View style={{ paddingLeft: 20 }}>
-            <Text style={{ fontSize: 20, fontWeight: "bold" }}>John Doe</Text>
+            <Text style={{ fontSize: 20, fontWeight: "bold" }}>Atticus Finch</Text>
           </View>
         </View>
       </View>
@@ -85,14 +85,6 @@ export default function DrawerContent({ navigation }) {
           focused={selected === "Budgeting"}
         />
         
-        <DrawerItem
-          icon={({ color, size }) => (
-            <MaterialCommunityIcons color={color} size={size} name={"bank"} />
-          )}
-          label={"Bank Reconciliations"}
-          onPress={() => selectItem("BankReconciliations")}
-          focused={selected === "BankReconciliations"}
-        />
         <DrawerItem
           icon={({ color, size }) => (
             <MaterialCommunityIcons
