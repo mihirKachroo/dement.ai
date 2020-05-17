@@ -7,56 +7,57 @@ import { Checkbox } from "react-native-paper";
 const goals = [
   {
     id: 1,
-    name: "Save",
-    description: "Save $200K in chequing account",
+    name: "Add Memories",
+    description: "Add 2 Memories",
     completed: true,
   },
   {
     id: 2,
-    name: "Acquire",
-    description: "Own $500K in real estate",
+    name: "Go to Physician",
+    description: "Go to regular physician check up",
     completed: true,
   },
   {
     id: 3,
-    name: "Save",
-    description: "Achieve a net worth of $1M",
+    name: "Add Memories",
+    description: "Add 4 Memories",
     completed: false,
   },
   {
     id: 4,
-    name: "Invest",
-    description: "Invest at least $250K in all stocks",
+    name: "Take Test",
+    description: "Take Memory test and scored 75%",
     completed: true,
   },
   {
     id: 5,
-    name: "Save",
-    description: "Save $1M in chequing account",
+    name: "Add Memories",
+    description: "Add 14 Memories",
     completed: false,
   },
   {
     id: 6,
-    name: "Invest",
-    description: "Profit $50K in all stocks",
+    name: "Take Test",
+    description: "Take Memory test and scored 75%",
     completed: true,
   },
   {
     id: 7,
-    name: "Invest",
-    description: "Own 2 shares of Google",
+    name: "Go to Physician",
+    description: "Go to regular physician check up",
+
     completed: false,
   },
   {
     id: 8,
-    name: "Invest",
-    description: "Own 4 shares of Amazon",
+    name: "Add Memories",
+    description: "Add 8 Memories",
     completed: false,
   },
   {
     id: 9,
-    name: "Invest",
-    description: "Profit $30K from the stock market",
+    name: "Take Test",
+    description: "Take Memory test and scored 75%",
     completed: false,
   },
 ];
@@ -64,7 +65,7 @@ const goals = [
 export default function FinancialGoals() {
   return (
     <View style={{ flex: 1 }}>
-      <HeaderBar pageName={"Financial Goals"} />
+      <HeaderBar pageName={"Tasks"} />
       <FlatList
         data={goals}
         renderItem={({ item }) => {
@@ -85,7 +86,7 @@ export default function FinancialGoals() {
           mode="contained"
           style={{ height: 50, justifyContent: "center" }}
         >
-          Add Goal
+          Add New Task
         </Button>
       </View>
     </View>

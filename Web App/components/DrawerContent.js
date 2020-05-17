@@ -42,7 +42,7 @@ export default function DrawerContent({ navigation }) {
           icon={({ color, size }) => (
             <MaterialCommunityIcons color={color} size={size} name={"target"} />
           )}
-          label={"Financial Goals"}
+          label={"Tasks"}
           onPress={() => selectItem("Goals")}
           focused={selected === "Goals"}
         />
