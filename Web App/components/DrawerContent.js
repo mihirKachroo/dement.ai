@@ -117,7 +117,7 @@ export default function DrawerContent({ navigation }) {
             <MaterialCommunityIcons
               color={color}
               size={size}
-              name={"calculator"}
+              name={"account-cog"}
             />
           )}
           label={"Your Information"}
@@ -130,7 +130,7 @@ export default function DrawerContent({ navigation }) {
             <MaterialCommunityIcons
               color={color}
               size={size}
-              name={"office-building"}
+              name={"key"}
             />
           )}
           label={"Log In"}
