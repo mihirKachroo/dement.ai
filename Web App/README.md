@@ -1,6 +1,6 @@
 # alze.vision Native App
 Hackathon Project For htsh.hacks() 2020
-[View Video Demonstration](https://www.youtube.com/watch?v=ki2QPCBCLu0)
+[View Video Demonstration](https://www.youtube.com/watch?v=8kXNEmMbcBY)
 
 ## Getting started
 - Clone the project and install dependencies
