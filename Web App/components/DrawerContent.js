@@ -68,9 +68,9 @@ export default function DrawerContent({ navigation }) {
               name={"calculator"}
             />
           )}
-          label={"Compound Interest Calc"}
-          onPress={() => selectItem("CompoundInterest")}
-          focused={selected === "CompoundInterest"}
+          label={"Make a Memory"}
+          onPress={() => selectItem("makeMemory")}
+          focused={selected === "makeMemory"}
         />
         <DrawerItem
           icon={({ color, size }) => (

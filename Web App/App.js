@@ -1,7 +1,7 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import Home from "./screens/Home.js";
-import CompoundInterest from "./screens/CompoundInterest";
+import makeMemory from "./screens/makeMemory";
 import FinancialGoals from "./screens/FinancialGoals";
 import DrawerContent from "./components/DrawerContent";
 import { createDrawerNavigator } from "@react-navigation/drawer";
@@ -25,7 +25,7 @@ export default function App() {
         )}
       >
         <Drawer.Screen name={"Home"} component={Home} />
-        <Drawer.Screen name={"CompoundInterest"} component={CompoundInterest} />
+        <Drawer.Screen name={"makeMemory"} component={makeMemory} />
         <Drawer.Screen name={"Goals"} component={FinancialGoals} />
         <Drawer.Screen name={"Transactions"} component={MyTransactions} />
         <Drawer.Screen name={"Budgeting"} component={Budgeting} />
