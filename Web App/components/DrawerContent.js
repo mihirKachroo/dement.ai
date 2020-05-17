@@ -54,7 +54,7 @@ export default function DrawerContent({ navigation }) {
             <MaterialCommunityIcons
               color={color}
               size={size}
-              name={"calculator"}
+              name={"battery-charging-outline"}
             />
           )}
           label={"Make a Memory"}
@@ -66,7 +66,7 @@ export default function DrawerContent({ navigation }) {
             <MaterialCommunityIcons
               color={color}
               size={size}
-              name={"book-open"}
+              name={"test-tube"}
             />
           )}
           label={"Test Your Memory"}
