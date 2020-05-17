@@ -1,4 +1,6 @@
 # alz.vision
+Hackathon Project for hths.hacks() 2020
+
 https://www.youtube.com/watch?v=8kXNEmMbcBY
 
 ## Inspiration
