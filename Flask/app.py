@@ -1,5 +1,5 @@
 import pandas as pd
-from flask import Flask, jsonify, request, send_file
+from flask import Flask, jsonify, request, send_file, render_template, redirect
 import mainModel
 import numpy as np
 import matplotlib.pyplot as plt 
@@ -11,7 +11,16 @@ from pymongo import MongoClient
 app = Flask(__name__)
 
 # routes
+@app.route('/')
+def index():
+    return render_template('index.html') 
+
 @app.route('/', methods=['POST'])
+def my_form():
+    if request.method == "POST":
+        text = request.form['text']
+        print(text)
+    return render_template('index.html')
 
 def predict():
     # get data
