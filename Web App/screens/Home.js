@@ -6,7 +6,8 @@ import {
   FlatList,
   Text,
   Button,
-  TextInput
+  TextInput,
+  Image
 } from 'react-native';
 import React, { useState, useEffect } from "react";
 
@@ -36,6 +37,10 @@ render() {
     <View>
       <HeaderBar pageName={"Home"} />
       <HomeHeading />
+      <Image
+        style={styles.stretch}
+        source={require('./alz.png')}
+      />
       <View style={styles.innerContainer}>  
       
       <Button  
@@ -47,6 +52,7 @@ render() {
                             onPress={this.placeSubmitHandler}  
                     />  
                 </View>  
+                
     </View>
   );
 }}
@@ -74,5 +80,10 @@ const styles = StyleSheet.create({
   buttonStyle:{  
       width: "50%",
 
-  }  
+  },
+  stretch: {
+    width: '100%',
+    height: 250,
+    resizeMode: 'stretch',
+  },
 });  
