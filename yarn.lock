@@ -200,6 +200,11 @@ babel-plugin-syntax-jsx@^6.18.0:
   resolved "https://registry.yarnpkg.com/babel-plugin-syntax-jsx/-/babel-plugin-syntax-jsx-6.18.0.tgz#0af32a9a6e13ca7a3fd5069e62d7b0f58d0d8946"
   integrity sha1-CvMqmm4Tyno/1QaeYtew9Y0NiUY=
 
+c-button@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/c-button/-/c-button-1.0.3.tgz#d60782a6e367d59cfd934260d432875da96e36c1"
+  integrity sha512-5qjSGzBlthZyanDE3hYhZrYeu9N4ponc1HmktIkVJ7UTxG3+ima0Du1thKIb30UI2JihDTryc+XNEqPQb+HukQ==
+
 camelcase@^5.0.0:
   version "5.3.1"
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-5.3.1.tgz#e3c9b31569e106811df242f715725a1f4c494320"

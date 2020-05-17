@@ -1,71 +1,78 @@
-import { Text, FlatList, View, StyleSheet } from "react-native";
-import { Card, List } from "react-native-paper";
+import {
+  SafeAreaView,
+  StatusBar,
+  StyleSheet,
+  View,
+  FlatList,
+  Text,
+  Button,
+  TextInput
+} from 'react-native';
 import React, { useState, useEffect } from "react";
+
 import BasicItem from "../components/BasicItem";
 import HeaderBar from "../components/HeaderBar";
 import HomeHeading from "../components/HomeHeading";
 
-const user = {
-  income: {
-    value: 14.32,
-  },
-  expense: {
-    value: 145.3,
-  },
-  investments: {
-    value: 13.4,
-  }
-};
 
-export default function Home() {
-  const [cardsData, setCardsData] = useState([]);
-  useEffect(() => {
-    const arr = [];
-    for (let [key, value] of Object.entries(user)) {
-      arr.push({
-        type: key,
-        value: value.value,
-      });
-    }
-    setCardsData(arr);
-  }, []);
+export default class didYouKnow extends React.Component {
+  state = {  
+    placeName: "",  
+    places: []  
+};  
+
+placeNameChangedHandler = val => {  
+    this.setState({  
+        placeName: val  
+    });  
+};  
+
+placeSubmitHandler = () => {  
+    alert("button clicked")  
+};  
+render() {  
+
   return (
     <View>
       <HeaderBar pageName={"Home"} />
-      <View style={styles.items}>
-        <FlatList
-          data={cardsData}
-          renderItem={({ item }) => <BasicItem item={item} />}
-          keyExtractor={(item) => item.type}
-          numColumns={3}
-          ListHeaderComponent={HomeHeading}
-        />
-      </View>
+      <HomeHeading />
+      <View style={styles.innerContainer}>  
+      
+      <Button  
+                            title="Make a Memory"  
+                            onPress={this.placeSubmitHandler}  
+                    />
+                    <Button  
+                            title="Test a Memory"  
+                            onPress={this.placeSubmitHandler}  
+                    />  
+                </View>  
     </View>
   );
-}
+}}
 
-{/* <button id="upload_widget" class="cloudinary-button">Upload files</button>
 
-<script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>  
+const styles = StyleSheet.create({  
+  container: {  
+      flex: 1,  
+      padding: 26,  
+      backgroundColor: "#fff",  
+      justifyContent: "flex-start"  
+  },  
+  innerContainer:{  
+     // flex: 1,  
+      width: "82%",  
+      flexDirection: "row",  
+      justifyContent: "space-between",  
+      alignItems: "center",
+      margin:35
+  },  
+  textStyle:{  
+      width: "70%",  
+      backgroundColor: "gray",  
+  },  
+  buttonStyle:{  
+      width: "50%",
 
-<script type="text/javascript">  
-var myWidget = cloudinary.createUploadWidget({
-  cloudName: 'my_cloud_name', 
-  uploadPreset: 'my_preset'}, (error, result) => { 
-    if (!error && result && result.event === "success") { 
-      console.log('Done! Here is the image info: ', result.info); 
-    }
-  }
-)
-
-document.getElementById("upload_widget").addEventListener("click", function(){
-    myWidget.open();
-  }, false);
-</script> */}
-
-const styles = StyleSheet.create({
-  items: {
-    alignItems: "center",
-  },
-});
+  }  
+});  

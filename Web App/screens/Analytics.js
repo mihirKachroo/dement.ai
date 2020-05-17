@@ -31,13 +31,29 @@ export default function Analytics() {
   useEffect(() => {
     getData().then((fetched) => setData(fetched.results.results));
   }, []);
+
+
+
+
   return (
     <View style={{ flex: 1 }}>
       <HeaderBar pageName={"Analytics"} />
+      <View style={{marginTop: 40, marginBottom: 15, alignItems: 'center'}}>
+      <Text style={{fontWeight: 'bold', fontSize: 30}}>Let's See Your Scores</Text>
+    </View>
+    <View style={{marginTop: 15, marginBottom: 10, alignItems: 'left'}}>
+      <Text style={{fontWeight: 'bold', fontSize: 16}}>Completed Tests: 145</Text>
+    </View>
+    <View style={{marginTop: 15, marginBottom: 10, alignItems: 'left'}}>
+      <Text style={{fontWeight: 'bold', fontSize: 16}}>Your Accuracy: 26%</Text>
+    </View>
+    <View style={{marginTop: 15, marginBottom: 0, alignItems: 'left'}}>
+      <Text style={{fontWeight: 'bold', fontSize: 16}}>Diagnosis: Middle Dementia</Text>
+    </View>
 
   <Image
   style={{
-    width: 400,
+    width: 420,
     height: 350,
     resizeMode: 'contain'
   }}
