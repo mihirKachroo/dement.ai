@@ -17,7 +17,7 @@ const data = {
         },
         {
             title: "How We Built alz.vision",
-            content: `dsme odssed Uipath to webscdss`,
+            content: `React Native for the mobile app. Javascript, HTML, and CSS for the web app. Python for the machine learning models. And MongoDB Atlas for the backend.`,
         },
         
         {
@@ -25,7 +25,7 @@ const data = {
             content: ".",
         },
         {
-          title: "What Is Next For Obsidion",
+          title: "What Is Next For Alz.vision",
           content: `W.`,
       },
     ],
