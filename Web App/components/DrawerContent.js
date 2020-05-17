@@ -21,7 +21,7 @@ export default function DrawerContent({ navigation }) {
             }}
           />
           <View style={{ paddingLeft: 20 }}>
-            <Text style={{ fontSize: 20, fontWeight: "bold" }}>John Doe</Text>
+            <Text style={{ fontSize: 20, fontWeight: "bold" }}>Atticus Finch</Text>
           </View>
         </View>
       </View>
@@ -42,22 +42,11 @@ export default function DrawerContent({ navigation }) {
           icon={({ color, size }) => (
             <MaterialCommunityIcons color={color} size={size} name={"target"} />
           )}
-          label={"Financial Goals"}
+          label={"Tasks"}
           onPress={() => selectItem("Goals")}
           focused={selected === "Goals"}
         />
-        <DrawerItem
-          icon={({ color, size }) => (
-            <MaterialCommunityIcons
-              color={color}
-              size={size}
-              name={"format-list-bulleted"}
-            />
-          )}
-          label={"My transactions"}
-          onPress={() => selectItem("Transaction")}
-          focused={selected === "Transaction"}
-        />
+        
       </Drawer.Section>
       <Drawer.Section title={"Tools"} style={styles.section}>
         <DrawerItem
@@ -68,9 +57,9 @@ export default function DrawerContent({ navigation }) {
               name={"calculator"}
             />
           )}
-          label={"Compound Interest Calc"}
-          onPress={() => selectItem("CompoundInterest")}
-          focused={selected === "CompoundInterest"}
+          label={"Make a Memory"}
+          onPress={() => selectItem("makeMemory")}
+          focused={selected === "makeMemory"}
         />
         <DrawerItem
           icon={({ color, size }) => (
@@ -80,19 +69,11 @@ export default function DrawerContent({ navigation }) {
               name={"book-open"}
             />
           )}
-          label={"Budgeting"}
+          label={"Test Your Memory"}
           onPress={() => selectItem("Budgeting")}
           focused={selected === "Budgeting"}
         />
         
-        <DrawerItem
-          icon={({ color, size }) => (
-            <MaterialCommunityIcons color={color} size={size} name={"bank"} />
-          )}
-          label={"Bank Reconciliations"}
-          onPress={() => selectItem("BankReconciliations")}
-          focused={selected === "BankReconciliations"}
-        />
         <DrawerItem
           icon={({ color, size }) => (
             <MaterialCommunityIcons
@@ -136,7 +117,7 @@ export default function DrawerContent({ navigation }) {
             <MaterialCommunityIcons
               color={color}
               size={size}
-              name={"calculator"}
+              name={"account-cog"}
             />
           )}
           label={"Your Information"}
@@ -149,7 +130,7 @@ export default function DrawerContent({ navigation }) {
             <MaterialCommunityIcons
               color={color}
               size={size}
-              name={"office-building"}
+              name={"key"}
             />
           )}
           label={"Log In"}

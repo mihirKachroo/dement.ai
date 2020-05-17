@@ -14,13 +14,7 @@ const user = {
   },
   investments: {
     value: 13.4,
-  },
-  assets: {
-    value: 1.5,
-  },
-  liabilities: {
-    value: 132.3,
-  },
+  }
 };
 
 export default function Home() {

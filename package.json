@@ -1,5 +1,13 @@
 {
   "dependencies": {
-    "axios": "^0.19.2"
+    "@babel/runtime": "7.0.0-beta.55",
+    "axios": "^0.19.2",
+    "expo-camera": "^8.2.0",
+    "expo-permissions": "^8.1.0",
+    "react-hook-form": "^5.7.2",
+    "react-native-camera": "^3.26.0",
+    "react-native-clean-form": "^0.5.0",
+    "react-native-elements": "^2.0.0",
+    "tcomb-form-native": "^0.6.20"
   }
 }
