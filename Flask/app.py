@@ -11,9 +11,16 @@ from pymongo import MongoClient
 app = Flask(__name__)
 
 # routes
-@app.route('/', methods=['POST'])
+@app.route('/')
 def index():
     return render_template('index.html') 
+
+@app.route('/', methods=['POST'])
+def my_form():
+    if request.method == "POST":
+        text = request.form['text']
+        print(text)
+    return render_template('index.html')
 
 def predict():
     # get data
