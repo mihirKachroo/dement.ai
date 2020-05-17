@@ -16,7 +16,7 @@ const data = {
                 "dasdles.",
         },
         {
-            title: "How We Built Obsidion",
+            title: "How We Built alz.vision",
             content: `dsme odssed Uipath to webscdss`,
         },
         
