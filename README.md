@@ -1,5 +1,5 @@
-# alz.vision
-Hackathon Project for hths.hacks() 2020
+# Dement.ai
+Hackathon Project for World Hackathon Day 2020
 
 https://www.youtube.com/watch?v=8kXNEmMbcBY
 
